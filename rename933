@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd /mnt/flash/prepare933
+
+i=0
+for f in `ls -tr *.jpg 2>/dev/null`
+do
+    newf=`printf %06d $i`.jpg
+    mv $f $newf
+    i=$((i+1))
+done

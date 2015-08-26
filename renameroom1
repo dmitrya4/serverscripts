@@ -1,0 +1,18 @@
+#!/bin/bash -xv
+
+cd /mnt/flash/prepareroom1
+#num = 1
+i=0
+for f in `ls -tr *.jpg 2>/dev/null`
+do
+    newf=`printf %06d $i`.jpg 
+    mv $f $newf
+    i=$((i+1))
+
+#mv "$f" "$num".jpg
+#let "num += 1"
+
+
+done
+
+#avconv -r 10 -i %06d.jpg -r 10 -vcodec mjpeg -qscale 1 video1.avi

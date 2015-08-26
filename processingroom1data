@@ -1,0 +1,17 @@
+#!/bin/bash -xv
+
+#cd /mnt/flash/room1
+#mv -f *jpg /mnt/flash/prepareroom1
+
+cd /home/pi/scripts/
+./renameroom1
+./room1avicreator.py
+
+cd /mnt/flash/prepareroom1
+#cp -r *avi /mnt/flash/ftp/privat/room1
+mv -f *avi /mnt/flash/ftp/privat/room1
+#Temporary swithed off this operation
+#mv -f *avi /mnt/flash/dav/video/room1
+
+cd /mnt/flash/prepareroom1
+rm -rf *jpg

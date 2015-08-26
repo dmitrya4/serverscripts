@@ -1,0 +1,4 @@
+#!/bin/bash -xv
+
+cd /mnt/flash/ftp/933
+mv -f *jpg /mnt/flash/prepare933

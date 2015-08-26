@@ -1,0 +1,20 @@
+#!/bin/bash -xv
+
+#cd /mnt/flash/ftp/933
+#mv -f *jpg /mnt/flash/prepare933
+
+#cd /mnt/flash/ftp/933
+#rm -rf *jpg
+
+cd /home/pi/scripts
+./rename933
+./933avicreator.py
+
+cd /mnt/flash/prepare933
+#cp -r *avi /mnt/flash/ftp/privat/holl
+mv -f *avi /mnt/flash/ftp/privat/holl
+#Temporary switched off this operation
+#mv -f *avi /mnt/flash/dav/video/holl
+
+cd /mnt/flash/prepare933
+rm -rf *jpg

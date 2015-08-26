@@ -1,0 +1,4 @@
+#!/bin/bash -xv
+
+cd /mnt/flash/room1
+mv -f *jpg /mnt/flash/prepareroom1
