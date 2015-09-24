@@ -23,12 +23,12 @@ os.chdir(path)
 #Make & start command to convert jpg to avi
 comname = "avconv -r 5 -i %06d.jpg -r 5 -vcodec mjpeg -qscale 1 .avi"
 result = subprocess.getoutput(comname)
-logging.info(comname)
+logging.info('AVI created!')
 
 #Rename .avi to current_utc_date_time.avi
 f = os.listdir(path)
 ren = os.rename('.avi', str(name)+'.avi')
-logging.info('Finished')
-logging.info('_____________________________')
+logging.info('___Exit from script__')
+
 
 
